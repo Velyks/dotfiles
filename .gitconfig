@@ -1,6 +1,7 @@
 [user]
 	name = Thomas Sands
 	email = thomas.sands@ly.st
+	signingkey = 788E3DD3E8DE582E
 
 [alias]
     deletebranch = "BRANCH=`git rev-parse --abbrev-ref HEAD` && git checkout master && git pull --rebase upstream master && git push origin master && git remote prune origin && git branch -d $BRANCH"
