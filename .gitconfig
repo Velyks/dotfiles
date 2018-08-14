@@ -13,3 +13,12 @@
 	amend = commit -a --amend
 [core]
 	excludesfile = /Users/thomassands/.gitignoreglobal
+	editor = code --wait
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
