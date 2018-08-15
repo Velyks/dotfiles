@@ -7,10 +7,9 @@
     deletebranch = "BRANCH=`git rev-parse --abbrev-ref HEAD` && git checkout master && git pull --rebase upstream master && git push origin master && git remote prune origin && git branch -d $BRANCH"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	undo = reset HEAD~1 --mixed
-	amend = commit -a --amend
 	cleanup = !git remote prune origin && git branch --merged | egrep -v '(^\\*|master|develop)' | xargs git branch -d
 	cob = checkout -b
-	amend = commit -a --amend
+	oops = commit --amend --no-edit
 [core]
 	excludesfile = /Users/thomassands/.gitignoreglobal
 	editor = code --wait
