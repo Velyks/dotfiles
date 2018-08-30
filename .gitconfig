@@ -17,7 +17,11 @@
 	tool = default-difftool
 [difftool "default-difftool"]
 	cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
 [merge]
 	tool = vscode
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
+[mergetool "meld"]
+	cmd = cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
