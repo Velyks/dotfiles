@@ -130,5 +130,7 @@ alias tfp='terraform plan'
 alias tfp-create='terraform plan -no-color | grep -E "^\s*\+.*$" | sed "s/^[ \t]*+ //" | sed "1d"'
 alias tfp-change='terraform plan -no-color | grep -E "^\s*~.*$" | sed "s/^[ \t]*~ //" | sed "1d"'
 alias tfp-destroy='terraform plan -no-color | grep -E "^\s\s*-.*$" | sed "s/^[ \t]*- //" | sed "1d"'
+alias tfsm='terraform state mv'
 alias tfsm-ecs='xargs -L 1 -I@ bash -c "terraform state mv -state=../../eu-west-1/ecs_vpc/terraform.tfstate -state-out=./terraform.tfstate @ @"'
 alias tfsm-main='xargs -L 1 -I@ bash -c "terraform state mv -state=../../eu-west-1/main_vpc/terraform.tfstate -state-out=./terraform.tfstate @ @"'
+alias chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
