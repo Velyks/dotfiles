@@ -134,3 +134,9 @@ alias tfsm='terraform state mv'
 alias tfsm-ecs='xargs -L 1 -I@ bash -c "terraform state mv -state=../../eu-west-1/ecs_vpc/terraform.tfstate -state-out=./terraform.tfstate @ @"'
 alias tfsm-main='xargs -L 1 -I@ bash -c "terraform state mv -state=../../eu-west-1/main_vpc/terraform.tfstate -state-out=./terraform.tfstate @ @"'
 alias chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
+
+# Keybindings
+bindkey '^[^[[D' backward-word
+bindkey '^[^[[C' forward-word
+bindkey '^[[3~' kill-word
+bindkey '^[^?' backward-kill-word
