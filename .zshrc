@@ -11,7 +11,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 DEFAULT_USER="thomassands"
 
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status kubecontext root_indicator background_jobs time)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(rbenv virtualenv context dir vcs)
 
 # Set list of themes to load
@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export CLICOLOR=1
+export EDITOR=code\ --wait
 
 #export LSCOLORS=ExFxBxDxcxegedabagacad
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
@@ -134,9 +135,13 @@ alias tfsm='terraform state mv'
 alias tfsm-ecs='xargs -L 1 -I@ bash -c "terraform state mv -state=../../eu-west-1/ecs_vpc/terraform.tfstate -state-out=./terraform.tfstate @ @"'
 alias tfsm-main='xargs -L 1 -I@ bash -c "terraform state mv -state=../../eu-west-1/main_vpc/terraform.tfstate -state-out=./terraform.tfstate @ @"'
 alias chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
+alias tb="nc termbin.com 9999"
+alias kc="kubectl"
 
 # Keybindings
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
-bindkey '^[[3~' kill-word
 bindkey '^[^?' backward-kill-word
+
+# kubectl autocomplete
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi

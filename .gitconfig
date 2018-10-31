@@ -25,3 +25,5 @@
 	cmd = code --wait $MERGED
 [mergetool "meld"]
 	cmd = cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[gpg]
+	program = /usr/local/bin/gpg
