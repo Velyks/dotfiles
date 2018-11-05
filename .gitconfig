@@ -4,12 +4,12 @@
 	signingkey = 788E3DD3E8DE582E
 
 [alias]
-    deletebranch = "BRANCH=`git rev-parse --abbrev-ref HEAD` && git checkout master && git pull --rebase upstream master && git push origin master && git remote prune origin && git branch -d $BRANCH"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	undo = reset HEAD~1 --mixed
 	cleanup = !git remote prune origin && git branch --merged | egrep -v '(^\\*|master|develop)' | xargs git branch -d
 	cob = checkout -b
 	oops = commit --amend --no-edit
+	delete-merged-branches = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 [core]
 	excludesfile = /Users/thomassands/.gitignoreglobal
 	editor = code --wait
