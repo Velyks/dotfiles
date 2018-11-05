@@ -145,3 +145,13 @@ bindkey '^[^?' backward-kill-word
 
 # kubectl autocomplete
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/thomassands/repos/serverless/update-cloudflare-ips/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/thomassands/repos/serverless/update-cloudflare-ips/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/thomassands/repos/serverless/update-cloudflare-ips/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/thomassands/repos/serverless/update-cloudflare-ips/node_modules/tabtab/.completions/sls.zsh
+
+# Path for user python
+export PATH=/Users/thomassands/Library/Python/3.6/bin:$PATH
