@@ -13,6 +13,10 @@ DEFAULT_USER="thomassands"
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status kubecontext root_indicator background_jobs time)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(rbenv virtualenv context dir vcs)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
+
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
