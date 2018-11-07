@@ -159,3 +159,10 @@ if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 
 # Path for user python
 export PATH=/Users/thomassands/Library/Python/3.6/bin:$PATH
+
+# Go dev
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+test -d "${GOPATH}" || mkdir "${GOPATH}"
+test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
