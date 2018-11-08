@@ -141,6 +141,7 @@ alias tfsm-main='xargs -L 1 -I@ bash -c "terraform state mv -state=../../eu-west
 alias chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
 alias tb="nc termbin.com 9999"
 alias kc="kubectl"
+alias activate=". venv/bin/activate"
 
 # Keybindings
 bindkey '^[^[[D' backward-word
