@@ -11,7 +11,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 DEFAULT_USER="thomassands"
 
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status kubecontext root_indicator background_jobs time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(rbenv virtualenv context dir vcs)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
