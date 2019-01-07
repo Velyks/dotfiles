@@ -157,3 +157,12 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+
+export AWS_SDK_LOAD_CONFIG=true
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/thomassands/repos/serverless/ebs-volume-cleaner/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/thomassands/repos/serverless/ebs-volume-cleaner/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/thomassands/repos/serverless/ebs-volume-cleaner/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/thomassands/repos/serverless/ebs-volume-cleaner/node_modules/tabtab/.completions/sls.zsh
