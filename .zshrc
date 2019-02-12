@@ -1,4 +1,3 @@
-zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -72,13 +71,7 @@ plugins=(
   git
   git_remote_branch
   docker
-  knife
-  osx
-  pip
-  python
-  tmux
   virtualenv
-  virtualenvwrapper
   colored-man-pages
 )
 
@@ -159,6 +152,5 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
+# AWS SAML fix
 export AWS_SDK_LOAD_CONFIG=true
-
-zprof
