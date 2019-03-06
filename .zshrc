@@ -117,10 +117,11 @@ alias ls='ls -GFh'
 export OPSCODE_USER=thomas
 export CHEF_URL=https://chef-master.lyst.co
 
-alias emp-previews='EMPIRE_API_URL="https://celery-empire.lystit.com" emp'
+alias emp-celery='EMPIRE_API_URL="https://celery-empire.lystit.com" emp'
 alias emp-microservices='EMPIRE_API_URL="https://microservices-empire.lystit.com" emp'
 alias emp-highcpu='EMPIRE_API_URL="https://highcpu-empire.lystit.com" emp'
 alias emp-previews='EMPIRE_API_URL="https://previews-empire.lystit.com" emp'
+alias emp-website='EMPIRE_API_URL="https://website-empire.lystit.com" emp'
 alias watch-microservice='watch -n 5 EMPIRE_API_URL="https://microservices-empire.lystit.com" emp ps -a'
 alias gpp='gcm && git pull --rebase upstream master && git push'
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -143,7 +144,11 @@ bindkey '^[^[[C' forward-word
 bindkey '^[^?' backward-kill-word
 
 # Path for user python
-export PATH=/Users/thomassands/Library/Python/3.6/bin:$PATH
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 # Go dev
 export GOPATH="${HOME}/.go"
