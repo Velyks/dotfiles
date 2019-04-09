@@ -159,3 +159,10 @@ test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
 # AWS SAML fix
 export AWS_SDK_LOAD_CONFIG=true
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/sls.zsh
