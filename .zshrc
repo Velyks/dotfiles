@@ -112,7 +112,7 @@ export EDITOR=code\ --wait
 #export LSCOLORS=ExFxBxDxcxegedabagacad
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-alias ls='ls -GFh'
+alias ls='lsd'
 
 export OPSCODE_USER=thomas
 export CHEF_URL=https://chef-master.lyst.co
