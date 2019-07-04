@@ -160,6 +160,9 @@ test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 # AWS SAML fix
 export AWS_SDK_LOAD_CONFIG=true
 
+# rbenv shim
+eval "$(rbenv init -)"
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/serverless.zsh
