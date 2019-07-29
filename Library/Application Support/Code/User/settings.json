@@ -86,5 +86,6 @@
     "workbench.editor.showTabs": true,
     "workbench.iconTheme": "vscode-icons",
     "extensions.ignoreRecommendations": true,
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": false
 }
