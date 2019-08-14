@@ -84,7 +84,7 @@
         "terminal.ansiBrightWhite": "#b1b9cb"
     },
     "workbench.editor.showTabs": true,
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "extensions.ignoreRecommendations": true,
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": false
