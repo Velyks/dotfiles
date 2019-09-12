@@ -27,7 +27,7 @@
     "python.testing.pytestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "[python]": {
-        "editor.tabSize": 4,
+        "editor.tabSize": 2,
         "editor.rulers": [100],
         "editor.formatOnPaste": false,
         "editor.formatOnSave": true,
