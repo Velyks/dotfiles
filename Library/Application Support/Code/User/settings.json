@@ -89,7 +89,7 @@
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": false,
     "terraform.indexing": {
-        "enabled": true,
+        "enabled": false,
         "liveIndexing": false,
         "delay": 500,
         "exclude": [
@@ -98,7 +98,7 @@
         ]
     },
     "terraform.languageServer": {
-        "enabled": false,
+        "enabled": true,
         "args": []
     }
 }
