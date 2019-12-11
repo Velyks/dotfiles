@@ -53,9 +53,9 @@
         "editor.detectIndentation": false,
         "editor.formatOnSave": true
     },
-    "gitlens.views.fileHistory.enabled": false,
+    "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.fileHistory.location": "scm",
-    "gitlens.views.lineHistory.enabled": false,
+    "gitlens.views.lineHistory.enabled": true,
     "gitlens.views.lineHistory.location": "scm",
     "workbench.colorTheme": "Atom One Dark",
     "terminal.external.osxExec": "iterm2.app",
