@@ -172,3 +172,7 @@ export BORK_USER=thomassands
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/sls.zsh
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/thomassands/repos/serverless/saml-read-only-audit/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/thomassands/repos/serverless/saml-read-only-audit/node_modules/tabtab/.completions/slss.zsh
