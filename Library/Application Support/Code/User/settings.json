@@ -100,5 +100,6 @@
     "terraform.languageServer": {
         "enabled": true,
         "args": []
-    }
+    },
+    "diffEditor.ignoreTrimWhitespace": false
 }
