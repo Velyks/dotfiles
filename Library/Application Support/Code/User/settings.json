@@ -57,7 +57,7 @@
     "gitlens.views.fileHistory.location": "scm",
     "gitlens.views.lineHistory.enabled": true,
     "gitlens.views.lineHistory.location": "scm",
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Visual Studio Light",
     "terminal.external.osxExec": "iterm2.app",
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.fontFamily": "FuraCode Nerd Font",
