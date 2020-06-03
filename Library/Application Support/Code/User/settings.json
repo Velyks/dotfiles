@@ -101,5 +101,6 @@
         "enabled": true,
         "args": []
     },
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "vs-kubernetes.kubectl-path": "/usr/local/bin/kubectl"
 }
