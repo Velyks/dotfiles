@@ -28,3 +28,5 @@
 	cmd = cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
 [gpg]
 	program = /usr/local/bin/gpg
+[hub]
+	host = git.lystit.com
