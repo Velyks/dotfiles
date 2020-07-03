@@ -104,5 +104,6 @@
         ]
     },
     "diffEditor.ignoreTrimWhitespace": false,
-    "vs-kubernetes.kubectl-path": "/usr/local/bin/kubectl"
+    "vs-kubernetes.kubectl-path": "/usr/local/bin/kubectl",
+    "python.languageServer": "Jedi"
 }
