@@ -105,5 +105,11 @@
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "vs-kubernetes.kubectl-path": "/usr/local/bin/kubectl",
-    "python.languageServer": "Jedi"
+    "python.languageServer": "Jedi",
+    "peacock": {
+        "affectActivityBar": false,
+        "affectStatusBar": true,
+        "affectTitleBar": true,
+        "surpriseMeOnStartup": true
+    }
 }
