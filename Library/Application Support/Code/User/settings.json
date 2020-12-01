@@ -98,10 +98,13 @@
         ]
     },
     "terraform.languageServer": {
-        "external": true,
+        "external": false,
+        "pathToBinary": "",
         "args": [
             "serve"
-        ]
+        ],
+        "maxNumberOfProblems": 100,
+        "trace.server": "off"
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "vs-kubernetes.kubectl-path": "/usr/local/bin/kubectl",
