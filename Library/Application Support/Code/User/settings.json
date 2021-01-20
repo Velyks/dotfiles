@@ -114,11 +114,5 @@
         "affectStatusBar": true,
         "affectTitleBar": true,
         "surpriseMeOnStartup": true
-    },
-	"workbench.editorAssociations": [
-		{
-			"viewType": "default",
-			"filenamePattern": "git-rebase-todo"
-		}
-	],
+    }
 }
