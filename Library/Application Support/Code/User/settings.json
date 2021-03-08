@@ -1,9 +1,6 @@
 {
     "editor.tabSize": 2,
     "git.autofetch": true,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
     "git.confirmSync": false,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.currentLine.enabled": false,
@@ -35,7 +32,7 @@
             "source.organizeImports": false,
         },
     },
-    "python.jediEnabled": true,
+    "python.jediEnabled": false,
     "python.venvFolders": [
         "envs",
         ".pyenv",
@@ -55,7 +52,6 @@
     },
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.fileHistory.location": "scm",
-    "gitlens.views.lineHistory.enabled": true,
     "gitlens.views.lineHistory.location": "scm",
     "workbench.colorTheme": "Atom One Dark",
     "terminal.external.osxExec": "iterm2.app",
@@ -108,11 +104,17 @@
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "vs-kubernetes.kubectl-path": "/usr/local/bin/kubectl",
-    "python.languageServer": "Jedi",
+    "python.languageServer": "Pylance",
     "peacock": {
         "affectActivityBar": false,
         "affectStatusBar": true,
         "affectTitleBar": true,
         "surpriseMeOnStartup": true
-    }
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ]
 }
