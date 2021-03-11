@@ -32,7 +32,7 @@
             "source.organizeImports": false,
         },
     },
-    "python.jediEnabled": false,
+    "python.jediEnabled": true,
     "python.venvFolders": [
         "envs",
         ".pyenv",
