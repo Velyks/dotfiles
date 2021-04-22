@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Speeds up load time
+DISABLE_UPDATE_PROMPT=true
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -77,7 +80,6 @@ ZLE_RPROMPT_INDENT=0
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  git_remote_branch
   docker
   virtualenv
   colored-man-pages
@@ -142,6 +144,7 @@ alias tb="nc termbin.com 9999"
 alias kc="kubectl"
 alias kx="kubectx"
 alias activate=". venv/bin/activate"
+alias argocd="argocd --grpc-web"
 
 # Keybindings
 bindkey '^[^[[D' backward-word
@@ -170,17 +173,6 @@ eval "$(rbenv init -)"
 
 # chef
 export BORK_USER=thomassands
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/thomassands/repos/serverless/github-event-test/node_modules/tabtab/.completions/sls.zsh
-
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/thomassands/repos/serverless/saml-read-only-audit/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/thomassands/repos/serverless/saml-read-only-audit/node_modules/tabtab/.completions/slss.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
