@@ -110,11 +110,9 @@
         "affectTitleBar": true,
         "surpriseMeOnStartup": true
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "redhat.telemetry.enabled": false
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open"
 }
