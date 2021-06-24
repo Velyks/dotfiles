@@ -11,6 +11,7 @@
 	oops = commit --amend --no-edit
 	delete-merged-branches = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 	sync-branch = "!git fetch upstream master:master; git rebase master"
+	yeet = push --force
 [core]
 	excludesfile = /Users/thomassands/.gitignoreglobal
 	editor = code --wait
