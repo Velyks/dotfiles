@@ -4,14 +4,16 @@
 	signingkey = 788E3DD3E8DE582E
 
 [alias]
+	main = "!git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	undo = reset HEAD~1 --mixed
-	cleanup = !git remote prune origin && git branch --merged | egrep -v '(^\\*|master|develop)' | xargs git branch -d
+	cleanup = "!git remote prune origin && git branch --merged | egrep -v '(^\\*|master|develop)' | xargs git branch -d"
 	cob = checkout -b
 	oops = commit --amend --no-edit
-	delete-merged-branches = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-	sync-branch = "!git fetch upstream master:master; git rebase master"
-	yeet = push --force
+	delete-merged-branches = "!f(){ git checkout $(git main) && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d}; f"
+	sync-branch = "!f(){ git fetch upstream $(git main):$(git main); git rebase $(git main);}; f"
+	yeet = push --force-with-lease
+	pp = "!f(){ git checkout $(git main) && git pull --rebase upstream $(git main) && git push;}; f"
 [core]
 	excludesfile = /Users/thomassands/.gitignoreglobal
 	editor = code --wait
