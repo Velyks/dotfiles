@@ -137,7 +137,7 @@ alias gpp='git pp'
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cls='colorls'
 alias tfp='terraform plan'
-alias tfi='terraform init'
+alias tfi='terraform init -upgrade'
 alias tfsm='terraform state mv'
 alias chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
 alias tb="nc termbin.com 9999"
@@ -180,3 +180,8 @@ PATH="${HOME}/.local/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="$PATH:$HOME/.krew/bin"
+
+# NVM
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

@@ -14,6 +14,14 @@
 	sync-branch = "!f(){ git fetch upstream $(git main):$(git main); git rebase $(git main);}; f"
 	yeet = push --force-with-lease
 	pp = "!f(){ git checkout $(git main) && git pull --rebase upstream $(git main) && git push;}; f"
+	co-pr = "!f(){ \
+								repo=$(basename $(git rev-parse --show-toplevel)); \
+								remote=$(echo ${1} | cut -f1 -d:);\
+								branch=$(echo ${1} | cut -f2 -d:);\
+								git remote add ${remote} git@git.lystit.com:${remote}/${repo}.git; \
+								git fetch ${remote} ${branch}; \
+								git checkout ${branch}; \
+							}; f"
 [core]
 	excludesfile = /Users/thomassands/.gitignoreglobal
 	editor = code --wait
