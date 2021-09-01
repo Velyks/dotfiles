@@ -41,3 +41,5 @@
 	program = /usr/local/bin/gpg
 [hub]
 	host = git.lystit.com
+[pull]
+	rebase = true
