@@ -122,8 +122,6 @@ export EDITOR=code\ --wait
 #export LSCOLORS=ExFxBxDxcxegedabagacad
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-alias ls='lsd'
-
 export OPSCODE_USER=thomas
 export CHEF_URL=https://chef-master.lyst.co
 
@@ -143,8 +141,13 @@ alias chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
 alias tb="nc termbin.com 9999"
 alias kc="kubectl"
 alias kx="kubectx"
+alias kn="kubens"
 alias activate=". venv/bin/activate"
 alias argocd="argocd --grpc-web"
+
+# Kube autocomplete
+source <(kubectl completion zsh)
+complete -F __start_kubectl kc
 
 # Keybindings
 bindkey '^[^[[D' backward-word
@@ -154,6 +157,7 @@ bindkey '^[^?' backward-kill-word
 # Path for user python
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/shims:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
@@ -185,3 +189,24 @@ export PATH="$PATH:$HOME/.krew/bin"
   export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export PATH="$PATH:$HOME/.krew/bin"
+
+# VSCode
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# Direnv
+eval "$(direnv hook zsh)"
+export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
+
+# Python libs
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

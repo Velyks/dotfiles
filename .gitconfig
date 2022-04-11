@@ -43,3 +43,5 @@
 	host = git.lystit.com
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main

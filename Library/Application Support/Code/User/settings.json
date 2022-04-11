@@ -31,15 +31,6 @@
             "source.organizeImports": false,
         },
     },
-    "python.jediEnabled": true,
-    "python.venvFolders": [
-        "envs",
-        ".pyenv",
-        ".direnv",
-        ".virtualenvs",
-        ".venv",
-        "venv"
-    ],
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": true,
     "editor.codeLens": false,
@@ -55,8 +46,8 @@
     "workbench.colorTheme": "Atom One Dark",
     "terminal.external.osxExec": "iterm2.app",
     "terminal.integrated.fontSize": 12,
-    "terminal.integrated.fontFamily": "FuraCode Nerd Font",
-    "python.terminal.activateEnvironment": false,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "python.terminal.activateEnvironment": true,
     "workbench.colorCustomizations": {
         "terminal.background": "#272b33",
         "terminal.foreground": "#a5adbd",
@@ -81,7 +72,7 @@
     "workbench.editor.showTabs": true,
     "workbench.iconTheme": "material-icon-theme",
     "extensions.ignoreRecommendations": true,
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
     "terraform.indexing": {
         "enabled": false,
@@ -102,8 +93,7 @@
         "trace.server": "off"
     },
     "diffEditor.ignoreTrimWhitespace": false,
-    "vs-kubernetes.kubectl-path": "/usr/local/bin/kubectl",
-    "python.languageServer": "Jedi",
+    "python.languageServer": "Pylance",
     "peacock": {
         "affectActivityBar": false,
         "affectStatusBar": true,
@@ -118,5 +108,10 @@
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
+    },
+    "vs-kubernetes": {
+        "vscode-kubernetes.kubectl-path.mac": "/Users/thomassands/.vs-kubernetes/tools/kubectl/kubectl",
+        "vscode-kubernetes.minikube-path.mac": "/Users/thomassands/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vscode-kubernetes.helm-path.mac": "/Users/thomassands/.vs-kubernetes/tools/helm/darwin-amd64/helm"
     }
 }
