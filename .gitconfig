@@ -10,11 +10,11 @@
 	cleanup = "!git remote prune origin && git branch --merged | egrep -v '(^\\*|master|develop)' | xargs git branch -d"
 	cob = checkout -b
 	oops = commit --amend --no-edit
-	delete-merged-branches = "!f(){ git checkout $(git main) && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d}; f"
-	sync-branch = "!f(){ git fetch upstream $(git main):$(git main); git rebase $(git main);}; f"
+	delete-merged-branches = "!f(){ git checkout $(git main) && git branch --merged | grep 'origin/' | xargs -n 1 git push origin --delete}; f"
+	sync = "!f(){ git fetch upstream $(git main):$(git main); git rebase $(git main);}; f"
 	yeet = push --force-with-lease
 	pp = "!f(){ git checkout $(git main) && git pull --rebase upstream $(git main) && git push;}; f"
-	co-pr = "!f(){ \
+	copr = "!f(){ \
 								repo=$(basename $(git rev-parse --show-toplevel)); \
 								remote=$(echo ${1} | cut -f1 -d:);\
 								branch=$(echo ${1} | cut -f2 -d:);\
