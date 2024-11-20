@@ -4,14 +4,17 @@
 	signingkey = 788E3DD3E8DE582E
 
 [alias]
-	main = "!git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4"
+	main = "!f(){ git remote show origin | grep 'HEAD branch:' | awk {'print $3'} ;}; f"
+	#main = "!git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4"
+	branch-remote = "!f(){ git config branch.$(git name-rev --name-only HEAD).remote;}; f"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	undo = reset HEAD~1 --mixed
-	cleanup = "!git remote prune origin && git branch --merged | egrep -v '(^\\*|master|develop)' | xargs git branch -d"
+	cleanup = "!git remote prune origin && git branch --merged | egrep -v '(^\\*|main|master|develop)' | xargs git branch -d"
 	cob = checkout -b
 	oops = commit --amend --no-edit
-	delete-merged-branches = "!f(){ git checkout $(git main) && git branch --merged | grep 'origin/' | xargs -n 1 git push origin --delete}; f"
-	sync = "!f(){ git fetch upstream $(git main):$(git main); git rebase $(git main);}; f"
+	delete-merged-branches = "!f(){ git checkout $(git main) && git branch --merged | grep 'origin/' | xargs -n 1 git push origin --delete;}; f"
+	sync = "!f(){ git fetch $(git branch-remote) $(git main):$(git main); git rebase $(git main);}; f"
+	prm = "!f(){ git pull --rebase origin $(git main);}; f"
 	yeet = push --force-with-lease
 	pp = "!f(){ git checkout $(git main) && git pull --rebase upstream $(git main) && git push;}; f"
 	copr = "!f(){ \
@@ -41,6 +44,8 @@
 	program = /usr/local/bin/gpg
 [hub]
 	host = git.lystit.com
+[push]
+	autoSetupRemote = true
 [pull]
 	rebase = true
 [init]

@@ -3,11 +3,15 @@
     "editor.formatOnSave": true,
     "git.autofetch": true,
     "git.confirmSync": false,
+    "git.rebaseWhenSync": true,
+    "git.enableSmartCommit": true,
+    "git.ignoredRepositories": [
+        "/Users/thomassands"
+    ],
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.enabled": false,
     "gitlens.mode.statusBar.enabled": false,
-    "git.enableSmartCommit": true,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 10000,
     "files.insertFinalNewline": true,
@@ -15,35 +19,29 @@
     "files.trimFinalNewlines": true,
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontLigatures": true,
-    "python.formatting.provider": "black",
-    "python.formatting.blackPath": "black",
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--max-line-length=100"
-    ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": false,
-    "python.testing.nosetestsEnabled": false,
     "[python]": {
         "editor.tabSize": 4,
         "editor.rulers": [
-            100
+            120
         ],
         "editor.formatOnPaste": false,
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": false,
+            "source.organizeImports": "never"
         },
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "charliermarsh.ruff"
     },
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": true,
-    "editor.codeLens": false,
+    "editor.codeLens": true,
     "[terraform]": {
         "editor.tabSize": 2,
         "editor.insertSpaces": true,
         "editor.detectIndentation": false,
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
         "editor.defaultFormatter": "hashicorp.terraform",
         "editor.formatOnSaveMode": "file"
     },
@@ -58,10 +56,10 @@
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.fileHistory.location": "scm",
     "gitlens.views.lineHistory.location": "scm",
-    "workbench.colorTheme": "Atom One Dark",
     "terminal.external.osxExec": "iterm2.app",
     "terminal.integrated.fontSize": 12,
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.fontFamily": "JetBrains Mono NL",
+    "terminal.integrated.scrollback": 5000,
     "python.terminal.activateEnvironment": true,
     "workbench.colorCustomizations": {
         "terminal.background": "#272b33",
@@ -84,10 +82,10 @@
         "terminal.ansiWhite": "#abb1bf",
         "terminal.ansiBrightWhite": "#b1b9cb"
     },
-    "workbench.editor.showTabs": true,
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.showTabs": "multiple",
+    "workbench.iconTheme": "vscode-icons",
     "extensions.ignoreRecommendations": true,
-    "editor.renderWhitespace": "none",
+    "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": false,
     "terraform.indexing": {
         "enabled": true,
@@ -98,7 +96,6 @@
             "**/.terraform/**/*"
         ]
     },
-    "diffEditor.ignoreTrimWhitespace": false,
     "python.languageServer": "Pylance",
     "peacock": {
         "affectActivityBar": false,
@@ -124,14 +121,33 @@
         "vs-kubernetes.minikube-show-information-expiration": "2023-05-22T10:49:11.189Z"
     },
     "github-enterprise.uri": "https://git.lystit.com",
-    "githubPullRequests.defaultMergeMethod": "rebase",
+    "githubPullRequests.defaultMergeMethod": "merge",
     "githubPullRequests.pullBranch": "never",
     "githubPullRequests.fileListLayout": "tree",
     "terraform.languageServer.enable": true,
     "terraform.languageServer.path": "",
     "githubPullRequests.createOnPublishBranch": "never",
-    "git.ignoredRepositories": [
-        "/Users/thomassands"
-    ],
     "vsicons.dontShowNewVersionMessage": true,
+    "workbench.colorTheme": "Atom One Dark",
+    "githubIssues.queries": [
+        {
+            "label": "My Issues",
+            "query": "default"
+        },
+        {
+            "label": "Created Issues",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        },
+        {
+            "label": "Recent Issues",
+            "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.stickyScroll.enabled": false,
+    "evenBetterToml.formatter.arrayAutoExpand": true,
+    "[yaml]": {
+        "diffEditor.ignoreTrimWhitespace": true
+    },
+    "github-actions.use-enterprise": true,
 }

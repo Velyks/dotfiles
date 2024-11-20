@@ -155,14 +155,6 @@ bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[^?' backward-kill-word
 
-# Path for user python
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$PYENV_ROOT/shims:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
 # Go dev
 export GOPATH="${HOME}/.go"
 export GOROOT="$(brew --prefix golang)/libexec"
@@ -197,12 +189,28 @@ export PATH="$HOME/.poetry/bin:$PATH"
 eval "$(direnv hook zsh)"
 export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
 
-# Python libs
-export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # NVM
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Path for user python
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/shims:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+alias testssaw-up="ssh -fNMT testssaw"
+alias testssaw-down="ssh -TO exit testssaw"
+alias testssaw-status="ssh -TO check testssaw"
+alias testssaw-psql="psql -h localhost -p 54322 -U testssawuser"
+
+# Node
+eval "$(fnm env --use-on-cd)"
+export LIBMEMCACHED="$(brew --prefix libmemcached)"
+alias xargs=gxargs
