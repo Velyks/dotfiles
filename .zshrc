@@ -145,6 +145,8 @@ alias kx="kubectx"
 alias kn="kubens"
 alias activate=". venv/bin/activate"
 alias argocd="argocd --grpc-web"
+alias asl="aws sso login"
+alias asl2="aws sso login --sso-session lyst-dr"
 
 # Kube autocomplete
 source <(kubectl completion zsh)
