@@ -18,6 +18,7 @@
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
     "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": false,
@@ -180,4 +181,5 @@
         "!Split",
         "!Split sequence"
     ],
+    "git.blame.editorDecoration.enabled": false,
 }

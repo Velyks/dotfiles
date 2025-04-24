@@ -147,6 +147,7 @@ alias activate=". venv/bin/activate"
 alias argocd="argocd --grpc-web"
 alias asl="aws sso login"
 alias asl2="aws sso login --sso-session lyst-dr"
+alias sed=gsed
 
 # Kube autocomplete
 source <(kubectl completion zsh)
@@ -216,3 +217,5 @@ alias testssaw-psql="psql -h localhost -p 54322 -U testssawuser"
 eval "$(fnm env --use-on-cd)"
 export LIBMEMCACHED="$(brew --prefix libmemcached)"
 alias xargs=gxargs
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
